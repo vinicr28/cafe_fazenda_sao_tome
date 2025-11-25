@@ -551,11 +551,207 @@ footer {
         height: 300px;
     }
 
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.specialty-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(74, 59, 50, 0.1) 0%, transparent 100%);
+    z-index: 1;
+}
+
+.specialty-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.specialty-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.specialty-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.specialty-highlight {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border-left: 4px solid var(--accent-color);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.specialty-highlight h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.specialty-highlight ul {
+    list-style: none;
+    padding: 0;
+}
+
+.specialty-highlight ul li {
+    padding: 0.8rem 0;
+    padding-left: 2.5rem;
+    position: relative;
+    color: #555;
+    line-height: 1.6;
+}
+
+.specialty-highlight ul li::before {
+    content: "☕";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.3rem;
+}
+
+.specialty-highlight ul li strong {
+    color: var(--primary-color);
+}
+
+.article-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3a2d26 100%);
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 59, 50, 0.3);
+}
+
+.article-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 59, 50, 0.4);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #c9a532 100%);
+    color: var(--primary-color);
+}
+
+.article-link i {
+    font-size: 1.1rem;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 5%;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.feature-item h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-col h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: var(--white);
+}
+
+.footer-col a:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 3rem 5%;
+    }
+
+    .specialty-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .specialty-image img {
+        height: 300px;
+    }
+
     .specialty-content h2 {
         font-size: 2rem;
     }
 
-    /* Mobile Header - Text centered between edges */
+    /* Mobile Header - Logo + Text centered, Hamburger right */
     header {
         justify-content: center;
         position: relative;
@@ -565,15 +761,19 @@ footer {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
     }
 
     .logo-image {
-        display: none;
+        display: block;
+        height: 45px;
     }
 
     .logo-text {
         display: block;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .cta-button {
