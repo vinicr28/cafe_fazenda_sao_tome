@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Fazenda São Tomé | Café Especial de Origem</title>
+    <meta name="description"
+        content="Café Fazenda São Tomé - O verdadeiro sabor do campo. Cafés especiais produzidos com tradição e qualidade. Peça pelo WhatsApp.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Fazenda São Tomé Logo" style="height: 60px;">
+        </div>
+        <nav>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#about">Nossa História</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me/5519992057955" class="cta-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> Fale Conosco
+        </a>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>O Verdadeiro Café de Fazenda</h1>
+            <p>Do grão à xícara, experimente a tradição e o sabor inigualável do nosso café especial.</p>
+            <a href="https://wa.me/5519992057955?text=Olá,%20gostaria%20de%20conhecer%20os%20cafés%20da%20Fazenda%20São%20Tomé!"
+                class="hero-btn" target="_blank">Peça pelo WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Nossos Produtos</h2>
+        <div class="product-grid">
+            <!-- Produto 1: Café Moído -->
+            <div class="product-card">
+                <img src="assets/product_moido.png" alt="Café Torrado e Moído">
+                <div class="product-info">
+                    <h3>Café Torrado e Moído</h3>
+                    <p>Prático, com aroma e sabor preservados. 100% Arábica.</p>
+                    <p class="variant-info">500g</p>
+                    <a href="https://wa.me/5519992057955?text=Olá,%20gostaria%20de%20comprar%20o%20Café%20Torrado%20e%20Moído%20(500g)"
+                        class="buy-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 2: Café em Grãos -->
+            <div class="product-card">
+                <img src="assets/product_graos.png" alt="Café em Grãos">
+                <div class="product-info">
+                    <h3>Café em Grãos</h3>
+                    <p>Sabor autêntico de fazenda. Ideal para moer na hora.</p>
+                    <div class="variant-selector">
+                        <select id="graos-size" onchange="updateGraosLink()">
+                            <option value="1kg">1kg</option>
+                            <option value="500g">500g</option>
+                            <option value="250g">250g</option>
+                        </select>
+                    </div>
+                    <a id="btn-graos"
+                        href="https://wa.me/5519992057955?text=Olá,%20gostaria%20de%20comprar%20o%20Café%20em%20Grãos%20(1kg)"
+                        class="buy-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 3: Cápsulas -->
+            <div class="product-card">
+                <img src="assets/product_capsulas.png" alt="Cápsulas Compatíveis Nespresso">
+                <div class="product-info">
+                    <h3>Cápsulas (Compatíveis Nespresso)</h3>
+                    <p>Praticidade sem abrir mão da qualidade. Intenso e aromático.</p>
+                    <p class="variant-info">10 cápsulas</p>
+                    <a href="https://wa.me/5519992057955?text=Olá,%20gostaria%20de%20comprar%20as%20Cápsulas%20de%20Café%20(10%20cápsulas)"
+                        class="buy-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Café Especial Section -->
+    <section class="specialty-coffee">
+        <div class="specialty-container">
+            <div class="specialty-image">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80"
+                    alt="Café Especial de Qualidade">
+            </div>
+            <div class="specialty-content">
+                <h2>Café Especial: Qualidade Reconhecida</h2>
+                <p>Você sabia que o café especial não é apenas um adjetivo, mas uma <strong>classificação técnica
+                        internacional?</strong> Segundo a Associação de Cafés Especiais (SCA), um café só recebe essa
+                    denominação quando atinge pelo menos <strong>80 pontos</strong> em uma escala de 0 a 100.</p>
+
+                <div class="specialty-highlight">
+                    <h3>Por que escolher café em grãos?</h3>
+                    <ul>
+                        <li><strong>Frescor prolongado:</strong> Grãos inteiros preservam aromas e dulçor naturais</li>
+                        <li><strong>Controle da moagem:</strong> Ajuste o perfil para cada tipo de preparo</li>
+                        <li><strong>Experiência única:</strong> Moer seu próprio café torna cada xícara especial</li>
+                    </ul>
+                </div>
+
+                <p>Na Fazenda São Tomé, nosso café especial é cultivado com dedicação e respeito à tradição, seguindo os
+                    mais altos padrões de qualidade. Cada grão é cuidadosamente selecionado para proporcionar uma
+                    experiência sensorial única.</p>
+
+                <a href="https://www.estadao.com.br/paladar/bebida/qual-o-melhor-cafe-em-graos-do-brasil/"
+                    class="article-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-newspaper"></i>
+                    Leia o artigo do Estadão sobre os melhores cafés do Brasil
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="assets/hero.png" alt="Plantação de Café Fazenda São Tomé">
+        </div>
+        <div class="about-text">
+            <h2>Muito mais que café. Somos tradição em Café Especial, direto da fazenda para você</h2>
+            <p>Muito mais que café. Na Fazenda São Tomé, em Alfenas, no coração do sul de Minas Gerais, cada grão de
+                café especial é cultivado com dedicação, tradição e respeito à natureza. Somos uma marca que carrega
+                consigo o legado de gerações apaixonadas pelo cultivo do café, preservando o sabor autêntico e a
+                qualidade que fazem da nossa região uma das mais reconhecidas do Brasil.</p>
+            <p>Nosso café especial em Alfenas nasce em solos férteis e clima ideal, onde a altitude e as condições
+                naturais favorecem a produção de grãos 100% arábica de altíssima qualidade. A cada safra, fazemos
+                questão de realizar a colheita manual, selecionando apenas os melhores frutos para garantir uma bebida
+                com identidade, pureza e notas sensoriais únicas, que conquistam desde o apreciador iniciante até o
+                verdadeiro amante de café.</p>
+            <p>Aqui, tradição e inovação caminham lado a lado. Seguimos práticas sustentáveis, respeitando o ciclo
+                natural da terra e investindo em métodos que preservam o meio ambiente e valorizam o trabalho humano.
+                Cada etapa do processo — do cultivo à torra artesanal — é pensada para oferecer um café da fazenda
+                fresco, rastreável e cheio de sabor.</p>
+            <p>Quando você experimenta o Café Fazenda São Tomé, sente mais do que um aroma irresistível: sente a
+                história de uma família que transforma o simples ato de beber café em uma experiência completa. Nossa
+                torra artesanal ressalta doçura, acidez equilibrada e corpo marcante, resultando em uma xícara
+                inesquecível.</p>
+            <p>Seja no dia a dia, em momentos especiais ou na cafeteria, levamos até você um café com origem controlada,
+                produzido em Alfenas e reconhecido pela excelência do café especial sul de Minas.</p>
+            <p>Nosso propósito é claro: entregar não apenas café, mas uma experiência rica, honesta e memorável. Um café
+                que conecta pessoas, desperta sentidos e leva o melhor do Brasil para a sua mesa.</p>
+            <p><strong>Café Fazenda São Tomé — Café especial direto da fazenda, do sul de Minas para você.</strong></p>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Por que escolher São Tomé?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-mountain"></i></div>
+                <h3>Altitude Ideal</h3>
+                <p>Cultivado acima de 1000m para maior doçura e acidez equilibrada.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-hands"></i></div>
+                <h3>Colheita Manual</h3>
+                <p>Seleção rigorosa dos grãos maduros, garantindo qualidade superior.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                <h3>Torra Artesanal</h3>
+                <p>Processo cuidadoso para despertar o melhor aroma e sabor.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Fazenda São Tomé</h4>
+                <p>Levando o melhor do café especial para a sua casa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> (19) 99205-7955</li>
+                    <li><i class="fas fa-envelope"></i> contato@cafefazendasaotome.com.br</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Café Fazenda São Tomé. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
